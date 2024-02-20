@@ -1,0 +1,149 @@
+/* Add this CSS to your styles or create a new CSS file */
+
+.comment-box {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 17px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.comment-username {
+  position: absolute;
+  top: -13px;
+  left: 10px;
+  background-color: white;
+  padding: 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.comment-text {
+  margin-right: 20px;
+  font-size: 20px; /* Menambahkan ukuran font yang lebih besar untuk isi_comment */
+  margin-top: 10px;
+}
+
+.comment-card {
+  overflow-y: auto;
+  max-height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-date {
+  font-size: 12px; /* Menambahkan ukuran font yang lebih kecil untuk comment-date */
+  position: absolute;
+  bottom: -10px; /* Menyesuaikan posisi dari bawah */
+  right: 10px; /* Menyesuaikan posisi dari kanan */
+  color: #8c8c8ce1;
+}
+
+
+/* css foto detail */
+.back-button-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.back-button {
+  color: #000;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.back-button:hover {
+  color: #555;
+}
+
+.fotodetail-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0.1, 0.1);
+}
+
+.photo-details {
+  display: grid;
+  padding: 30px;
+  grid-template-columns: 1fr 1fr; /* Menggunakan grid dengan dua kolom */
+  /* gap: 10px; */
+  width: 100%;
+}
+
+.foto-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  max-width: 360px;
+  padding-right: 5px;
+}
+
+.foto-box img {
+  height: auto;
+  max-width: 360px;
+  transition: transform 0.2s ease-in-out;
+  padding-right: 10px;
+}
+
+.foto-box:hover img {
+  transform: scale(1.1);
+}
+
+.details-comment-box {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-container {
+  /* padding: 10px; */
+  text-align: center;
+}
+
+.comments-container {
+  margin-top: 10px;
+}
+
+.comments-container h3{
+  font-size: 20px;
+}
+
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.chat-input {
+  flex-grow: 1;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.chat-send-btn {
+  margin-left: 8px;
+}
+
+.no-border{
+  border: none;
+}
+
+.comment-separator {
+  border: 1px solid #c7c5c5;
+  margin: 10px 0;
+}
+

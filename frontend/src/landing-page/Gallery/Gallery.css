@@ -1,0 +1,58 @@
+/* :root {
+  --primary: #00B98E;
+  --secondary: #73ADC2;
+  --light: #AECDFF;
+  --dark: #0E2E50;
+} */
+
+.btn-outline-dark:active,
+.btn-outline-dark:focus {
+    color: #000000;
+   
+}
+
+.clickable-image{
+  cursor: pointer;
+}
+
+.custom-modal .modal-content {
+  background-color: transparent;
+  border: none;
+}
+
+.custom-modal .modal-dialog {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.close-button-custom {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 5px 10px;
+} 
+
+.custom-modal {
+  background:none;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%; 
+  max-height: 400px; 
+  object-fit: contain; 
+}
+
+
+  
