@@ -67,7 +67,7 @@ const Gallery = ({ selectedCategory }) => {
       const id_gambar = String(imageId);
       const id_user = String(Id);
 
-      const response = await fetch(`http://127.0.0.1:8000/api/like`, {
+        await fetch(`http://127.0.0.1:8000/api/like`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ const Gallery = ({ selectedCategory }) => {
     try {
       const id_like = String(imageId);
 
-      const response = await fetch(`http://127.0.0.1:8000/api/like-delete/${id_like}`, {
+      await fetch(`http://127.0.0.1:8000/api/like-delete/${id_like}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -101,10 +101,6 @@ const Gallery = ({ selectedCategory }) => {
     } catch (error) {
       console.error('Error canceling like:', error);
     }
-  };
-
-  const openPopup = (image) => {
-    setClickedImage(image);
   };
 
   const closePopup = () => {

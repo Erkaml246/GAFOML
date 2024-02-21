@@ -15,7 +15,7 @@ const Header = ({ popularImages }) => {
   };
 
   return (
-    <div className="container-fluid header bg-white p-0 container">
+    <div className="container-fluid header bg-white p-0 container" style={{ marginTop: '150px' }}>
       <div className="row g-0 align-items-center flex-column-reverse flex-md-row">
         <div className="col-md-6 p-5 mt-lg-5">
           <h1 className="display-5 animated fadeIn mb-4" style={{ fontWeight: 'bold' }}>
@@ -29,12 +29,13 @@ const Header = ({ popularImages }) => {
           <OwlCarousel className="header-carousel" {...owlCarouselOptions}>
             {popularImages.map((image) => (
               <div key={image.id_gambar} className="owl-carousel-item">
-                <img
-                  src={`http://localhost:8000/files/` + image.gambar}
-                  alt={`Popular Image ${image.id_gambar}`}
-                  className="img-fluid"
-                  style={{ maxHeight: '550px', maxWidth: '100%' }}
-                />
+                    <img
+                        src={`http://localhost:8000/files/` + image.gambar}
+                        alt={`Popular ${image.id_gambar}`}
+                        className="img-fluid"
+                        style={{ maxHeight: '550px', maxWidth: '100%' }}
+                      />
+
               </div>
             ))}
           </OwlCarousel>

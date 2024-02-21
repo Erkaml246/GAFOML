@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useAuth } from '../auth/AuthContext';
 import { FaHome } from "react-icons/fa";
 
-const Navbar = ({ onToggleSidebar }) => {
+const Navbar = () => {
   const navigate = useNavigate();
   const { logout, userName, authToken, fotoUser } = useAuth();
 
@@ -38,14 +38,14 @@ const Navbar = ({ onToggleSidebar }) => {
         </a>
       </div>
       <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        <button
+        {/* <button
           className="navbar-toggler navbar-toggler align-self-center"
           type="button"
           onClick={onToggleSidebar}
           data-toggle="minimize"
         >
           <span className="icon-menu"></span>
-        </button>
+        </button> */}
 
         <ul className="navbar-nav navbar-nav-right">
           <li className="nav-item nav-profile dropdown">

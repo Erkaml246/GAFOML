@@ -1,4 +1,4 @@
-import { Card, Col, Row, Spinner, Container, Form, Button } from 'react-bootstrap';
+import { Card, Col, Row} from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -35,7 +35,7 @@ const Comment = () => {
     e.preventDefault();
 
     try {
-        const response = await axios.post('http://127.0.0.1:8000/api/comment', formData,
+        await axios.post('http://127.0.0.1:8000/api/comment', formData,
         {   
             headers: {
                 'Content-Type': 'multipart/form-data',

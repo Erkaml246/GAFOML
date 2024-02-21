@@ -33,7 +33,7 @@ const Topbar = () => {
 
   return (
     <div className=' mb-5'>
-      <nav className="navbar sticy-top navbar-expand-lg navbar-dark" style={{ backgroundColor: '#071952' }}>
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark" style={{ backgroundColor: '#071952' }}>
         <div className="container">
           <div className="navbar-brand d-flex align-items-center">
               <img src={Logo} alt="Logo" style={{ height: '55px', marginRight: '15px' }} />
