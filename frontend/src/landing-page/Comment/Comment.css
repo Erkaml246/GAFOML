@@ -1,7 +1,7 @@
 /* Add this CSS to your styles or create a new CSS file */
 
 .comment-box {
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd00;
   border-radius: 10px;
   margin-bottom: 17px;
   position: relative;
@@ -10,8 +10,8 @@
 
 .comment-username {
   position: absolute;
-  top: -13px;
-  left: 10px;
+  top: -1px;
+  left: 65px;
   background-color: white;
   padding: 0 5px;
   font-weight: bold;
@@ -19,9 +19,9 @@
 }
 
 .comment-text {
-  margin-right: 20px;
-  font-size: 20px; /* Menambahkan ukuran font yang lebih besar untuk isi_comment */
-  margin-top: 10px;
+  margin-left: 60px;
+  font-size: 20px; 
+  margin-top: 25px;
 }
 
 .comment-card {
@@ -75,7 +75,7 @@
 .photo-details {
   display: grid;
   padding: 30px;
-  grid-template-columns: 1fr 1fr; /* Menggunakan grid dengan dua kolom */
+  grid-template-columns: 1fr 1fr; 
   /* gap: 10px; */
   width: 100%;
 }
@@ -147,3 +147,48 @@
   margin: 10px 0;
 }
 
+
+.comment-user-avatar {
+  width: 53px;
+  height: 53px;
+  object-fit: cover;
+  border-radius: 50%; 
+  position: absolute;
+  top: -1px;
+  left: 1px;
+}
+
+.owner-avatar {
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-right: 10px;
+}
+
+.owner-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Tampilan tombol ketika formulir tidak diisi */
+.btn-disabled {
+  background-color: #848080 !important; /* Gunakan !important untuk mengesampingkan aturan lain */
+  cursor: not-allowed;
+  pointer-events: none; /* Menonaktifkan interaksi mouse */
+}
+
+/* Tampilan tombol ketika formulir diisi */
+.btn-primary:not(.btn-disabled) {
+  background-color: #071952;
+}
+
+/* Style tambahan untuk efek transisi jika diinginkan */
+.chat-send-btn {
+  transition: background-color 0.3s ease;
+}
+
+.chat-send-btn:hover {
+  background-color: #0c2b7a;
+}

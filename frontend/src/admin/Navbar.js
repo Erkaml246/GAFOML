@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../auth/AuthContext';
 import { FaHome } from "react-icons/fa";
+import Logo  from './css/logo-ukk.png';
+import Logo1  from './css/logo-ukk-1.png';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -31,11 +33,11 @@ const Navbar = () => {
     <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
         <a className="navbar-brand brand-logo mr-5">
-          <img src="images/logo-ukk.png" className="mr-2" />
+          <img src={Logo} className="mr-2" />
         </a>
-        <a className="navbar-brand brand-logo-mini" >
-          <img src="images/logo-ukk-1.png" />
-        </a>
+        {/* <a className="navbar-brand brand-logo-mini" >
+          <img src={Logo1} />
+        </a> */}
       </div>
       <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         {/* <button

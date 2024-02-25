@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Gambar;
+use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Log;
@@ -93,6 +94,14 @@ class GambarController extends Controller
             ], 404);
         }
 
+        $owners = User::find($gambar->id_user); // Mendapatkan informasi pemilik gambar
+
+        $gambar->owners = [
+            'name' => $owners->name,
+            'foto_user' => $owners->foto_user,
+        ];
+
+
         return response()->json($gambar ,200);
     }
 
@@ -179,25 +188,6 @@ class GambarController extends Controller
         return response()->json([
             'message' => "Gambar successfully deleted."
         ], 200);
-    }
-
-    // Contoh logging pada controller Laravel
-    public function getImagesByCategory(Request $request)
-    {
-        try {
-            $category = $request->input('category');
-
-            // Ambil gambar berdasarkan kategori
-            $images = Gambar::where('kategori', $category)->get();
-
-            return response()->json($images, 200);
-        } catch (\Exception $e) {
-            // Gunakan Log untuk mencatat kesalahan
-            Log::error('Error in getImagesByCategory: ' . $e->getMessage());
-
-            // Kembalikan respons kesalahan
-            return response()->json(['error' => 'Internal Server Error'], 500);
-        }
     }
 
 

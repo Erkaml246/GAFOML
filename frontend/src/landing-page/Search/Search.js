@@ -1,11 +1,11 @@
 // Search.jsx
 
-import React, { useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Container, Row } from "react-bootstrap";
 import { FaSearch } from "react-icons/fa";
 
 const Search = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
@@ -19,7 +19,7 @@ const Search = ({ onSearch }) => {
   return (
     <div>
       <Container>
-        <Row className='p-4'>
+        <Row className="p-4">
           <form className="container-fluid" onSubmit={handleSearch}>
             <div className="input-group">
               <span

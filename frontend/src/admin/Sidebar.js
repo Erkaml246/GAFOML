@@ -7,7 +7,7 @@ const Sidebar = ({ isToggled, onToggleSidebar }) => {
         : "sidebar sidebar-offcanvas";
 
     return (
-        <nav className={sidebarClass} id="sidebar" style={{ marginTop: '50px' }}>
+        <nav className={sidebarClass} id="sidebar" style={{ marginTop: '50px' }} >
             <ul className="nav">
                 <li className="nav-item">
                     <Link to="/admin" className="nav-link">
@@ -42,7 +42,7 @@ const Sidebar = ({ isToggled, onToggleSidebar }) => {
                     </Link>
                 </li>
             </ul>
-        </nav>
+      </nav>
     );
 };
 

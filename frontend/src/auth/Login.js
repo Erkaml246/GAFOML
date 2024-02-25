@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from './AuthContext';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "./AuthContext";
+import axios from "axios";
 
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const { login, authToken } = useAuth();
 
   useEffect(() => {
     if (authToken) {
-      navigate('/home');
+      navigate("/home");
     }
   }, [authToken, navigate]);
 
@@ -19,19 +19,24 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/login', {
+      const response = await axios.post("http://127.0.0.1:8000/api/login", {
         username,
         password,
       });
 
       if (response.data.success) {
-        login(response.data.data.token, response.data.data.name, response.data.data.id, response.data.data.foto_user);
-        navigate('/home');
+        login(
+          response.data.data.token,
+          response.data.data.name,
+          response.data.data.id,
+          response.data.data.foto_user
+        );
+        navigate("/home");
       } else {
         alert(response.data.message);
       }
     } catch (error) {
-      console.error('Error during login:', error);
+      console.error("Error during login:", error);
     }
   };
 
@@ -69,12 +74,23 @@ const Login = () => {
                     />
                   </div>
                   <div className="mt-3">
-                    <button type="submit" className="btn btn-block btn-lg font-weight-medium auth-form-btn" style={{ backgroundColor: '#071952', color: 'white' }}>
+                    <button
+                      type="submit"
+                      className="btn btn-block btn-lg font-weight-medium auth-form-btn"
+                      style={{ backgroundColor: "#071952", color: "white" }}
+                    >
                       Login
                     </button>
                   </div>
                   <div className="text-center mt-4 font-weight-light">
-                    Belum Punya Akun? <Link to="/register" className="text-primary" style={{ textDecoration: 'none' }}>Buat</Link>
+                    Belum Punya Akun?{" "}
+                    <Link
+                      to="/register"
+                      className="text-primary"
+                      style={{ textDecoration: "none" }}
+                    >
+                      Buat
+                    </Link>
                   </div>
                 </form>
               </div>

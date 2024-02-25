@@ -53,20 +53,21 @@ class CommentController extends Controller
     }
 
     public function show(string $id)
-    {
-        $comment = Comment::where('id_gambar',$id)
-            ->leftJoin('users', 'tbl_comment.id_user', '=', 'users.id')
-            ->select('tbl_comment.*', 'users.name')
-            ->get();
+{
+    // Initialize $comments variable
+    $comments = Comment::where('id_gambar', $id)
+        ->leftJoin('users', 'tbl_comment.id_user', '=', 'users.id')
+        ->select('tbl_comment.*', 'users.name', 'users.foto_user')
+        ->get();
 
-        if (!$comment) {
-            return response()->json([
-                'message' => "comment Not Found"
-            ], 404);
-        }
-
-        return response()->json($comment, 200);
+    if ($comments->isEmpty()) {
+        return response()->json([
+            'message' => "Comments Not Found"
+        ], 404);
     }
+
+    return response()->json($comments, 200);
+}
 
     public function destroy(string $id)
     {
